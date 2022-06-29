@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+<main>
+  <div class="heading">
+    <h1><%= title %></h1>
+  </div>
+  <form class="form" action="/" method="post">
+    <input name="todo" type="text" placeholder="add todo" />
+    <button class="add-btn" name="btn" value="<%= title %>" type="submit">
+      +
+    </button>
+  </form>
+
+  <div class="list-box">
+    <% for(item of newListItem){ %>
+    <div class="item">
+      <input type="checkbox" />
+      <p><%= item %></p>
+    </div>
+
+    <% } %>
+  </div>
+</main>
+
+<%- include('footer'); -%>
